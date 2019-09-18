@@ -1,0 +1,164 @@
+Last login: Wed Sep 18 11:53:12 on ttys000
+Eduardos-MacBook-Pro:~ edustrada$ pwd
+/Users/edustrada
+Eduardos-MacBook-Pro:~ edustrada$ cd pwd
+-bash: cd: pwd: No such file or directory
+Eduardos-MacBook-Pro:~ edustrada$ cd ../pwd
+-bash: cd: ../pwd: No such file or directory
+Eduardos-MacBook-Pro:~ edustrada$ pwd
+/Users/edustrada
+Eduardos-MacBook-Pro:~ edustrada$ ls
+Applications				Movies
+Desktop					Music
+Documents				Pictures
+Downloads				Public
+Foto em 27-02-2019 às 00.17.jpg		iCloud Drive (Arquivo)
+Library					tmp
+Eduardos-MacBook-Pro:~ edustrada$ cd tmp
+Eduardos-MacBook-Pro:tmp edustrada$ pwd
+/Users/edustrada/tmp
+Eduardos-MacBook-Pro:tmp edustrada$ ls
+git-101
+Eduardos-MacBook-Pro:tmp edustrada$ cd git-101/
+Eduardos-MacBook-Pro:git-101 edustrada$ ls
+IMG_0957.JPG	index.html
+Eduardos-MacBook-Pro:git-101 edustrada$ git add index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git commit 
+On branch master
+nothing to commit, working tree clean
+Eduardos-MacBook-Pro:git-101 edustrada$ git commit --message "added an 'alt' to 'src' tag"
+On branch master
+nothing to commit, working tree clean
+Eduardos-MacBook-Pro:git-101 edustrada$ git commitgit commit --message "added an 'alt' to 'src' tag"
+git: 'commitgit' is not a git command. See 'git --help'.
+Eduardos-MacBook-Pro:git-101 edustrada$ git commit --message "added an 'alt' to 'src' tag"
+On branch master
+Changes not staged for commit:
+	modified:   index.html
+
+no changes added to commit
+Eduardos-MacBook-Pro:git-101 edustrada$ git add index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git comm
+git: 'comm' is not a git command. See 'git --help'.
+
+The most similar commands are
+	commit
+	column
+Eduardos-MacBook-Pro:git-101 edustrada$ git commit --message "added an 'alt' to 'src' tag"
+[master 3ddca8e] added an 'alt' to 'src' tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Eduardos-MacBook-Pro:git-101 edustrada$ git diff index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git diff index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git add index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git diff index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git status
+On branch master
+nothing to commit, working tree clean
+Eduardos-MacBook-Pro:git-101 edustrada$ git log index.html 
+commit 3ddca8e359e5ca69d3452f2c625094956a1030af (HEAD -> master)
+Author: Eduardo Gemmal <dudu.gemmal@gmail.com>
+Date:   Wed Sep 18 12:30:17 2019 +0900
+
+    added an 'alt' to 'src' tag
+
+commit 5b8d866f6b1a53cd8e306be3488dd6acce6453ed
+Author: Eduardo Gemmal <edustrada@Eduardos-MacBook-Pro.local>
+Date:   Tue Sep 10 15:00:14 2019 +0900
+
+    Added profile picture
+
+commit dd5e16b8d379592e2816cc84ea13919ae1016642
+Author: Eduardo Gemmal <edustrada@Eduardos-MacBook-Pro.local>
+Date:   Tue Sep 10 14:48:14 2019 +0900
+
+    Basic HTML skeleton for the 'Coming Soon' page.
+Eduardos-MacBook-Pro:git-101 edustrada$ git lg
+* 3ddca8e - (HEAD -> master) added an 'alt' to 'src' tag (5 minutes ago) <Eduardo Gemmal>
+* 5b8d866 - Added profile picture (8 days ago) <Eduardo Gemmal>
+* dd5e16b - Basic HTML skeleton for the 'Coming Soon' page. (8 days ago) <Eduardo Gemmal>
+Eduardos-MacBook-Pro:git-101 edustrada$ git branch center-elements
+Eduardos-MacBook-Pro:git-101 edustrada$ git branch
+  center-elements
+* master
+Eduardos-MacBook-Pro:git-101 edustrada$ git checkout center-elements
+Switched to branch 'center-elements'
+Eduardos-MacBook-Pro:git-101 edustrada$ stt
+-bash: stt: command not found
+Eduardos-MacBook-Pro:git-101 edustrada$ git status
+On branch center-elements
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Eduardos-MacBook-Pro:git-101 edustrada$ git diff index.html 
+diff --git a/index.html b/index.html
+index 7145297..2ae2a2d 100644
+--- a/index.html
++++ b/index.html
+@@ -1,11 +1,14 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
++       <link rel="stylesheet" type="text/css" href="style.css"></link>
+        <title></title>
+ </head>
+ <body>
+-       <img src="IMG_0957.JPG" alt="">
+-       <h1>Coming soon... on LeWagon!</h1>
++       <div id="container">
++               <img id="photo" src="IMG_0957.JPG" alt="">
++               <h1>Coming soon... on LeWagon!</h1>
++       </div>
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Eduardos-MacBook-Pro:git-101 edustrada$ git add index.html 
+Eduardos-MacBook-Pro:git-101 edustrada$ git add style.css 
+Eduardos-MacBook-Pro:git-101 edustrada$ git commit -m "centered image and tagline + styled both"
+[center-elements 74945a8] centered image and tagline + styled both
+ 2 files changed, 32 insertions(+), 2 deletions(-)
+ create mode 100644 style.css
+Eduardos-MacBook-Pro:git-101 edustrada$ git status
+On branch center-elements
+nothing to commit, working tree clean
+Eduardos-MacBook-Pro:git-101 edustrada$ git checkout master
+Switched to branch 'master'
+Eduardos-MacBook-Pro:git-101 edustrada$ git checkout center-elements
+Switched to branch 'center-elements'
+Eduardos-MacBook-Pro:git-101 edustrada$ git checkout master
+Switched to branch 'master'
+Eduardos-MacBook-Pro:git-101 edustrada$ git merge --no-ff center-elements
+hint: Waiting for your editor to close the file... 
+Merge branch 'center-elements'
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit. 
+# -my note- This shows my changes in the exercise to merge branches
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+
